@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: karthicksaidockerspringbootjavawebserviceexample 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: karthicksaidockerspringbootjavawebserviceexample
+  template:
+    metadata:
+      labels:
+        app: karthicksaidockerspringbootjavawebserviceexample 
+    spec:
+      containers:
+        - name: karthicksaidockerspringbootjavawebserviceexample 
+          image: myprivateacrdemo.azurecr.io/karthicksaidockerspringbootjavawebserviceexample
+          ports:
+          - containerPort: 8080
